@@ -1,0 +1,19 @@
+import init.imx53qsb.usb.rc
+
+on early-init
+    export EXTERNAL_STORAGE /mnt/sdcard
+    mkdir /mnt/sdcard 0000 system system
+    # for backwards compatibility
+    symlink /mnt/sdcard /sdcard
+
+on post-fs-data
+    mkdir /data/misc/dhcp 0770 dhcp dhcp
+    chown dhcp dhcp /data/misc/dhcp
+
+on fs
+# mount ext4 partitions
+    mount ext4 /dev/block/mmcblk0p2 /system
+    mount ext4 /dev/block/mmcblk0p2 /system ro remount
+    mount ext4 /dev/block/mmcblk0p5 /data nosuid nodev nodelalloc
+    mount ext4 /dev/block/mmcblk0p6 /cache nosuid nodev
+
