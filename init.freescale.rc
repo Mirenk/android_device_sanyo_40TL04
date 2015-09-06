@@ -12,6 +12,7 @@ on post-fs-data
 
 on fs
 # mount ext4 partitions
+# if you use SD , you have change mmcblk0 to mmcblk1.
     mount ext4 /dev/block/mmcblk0p2 /system
     mount ext4 /dev/block/mmcblk0p2 /system ro remount
     mount ext4 /dev/block/mmcblk0p5 /data nosuid nodev nodelalloc
