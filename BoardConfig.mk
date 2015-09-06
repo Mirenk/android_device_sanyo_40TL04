@@ -33,7 +33,7 @@ TARGET_NO_KERNEL := true
 TARGET_NO_RADIOIMAGE := true
 TARGET_BOOTLOADER_BOARD_NAME := 40TL04
 
-BOARD_EGL_CFG := device/fsl/imx53qsb/egl.cfg
+BOARD_EGL_CFG := device/sanyo/40TL04
 
 #BOARD_USES_HGL := true
 #BOARD_USES_OVERLAY := true
