@@ -19,7 +19,7 @@ PRODUCT_COPY_FILES := \
 	device/sanyo/40TL04/init.freescale.rc:root/init.freescale.rc \
 	device/sanyo/40TL04/init.freescale.usb.rc:root/init.freescale.usb.rc \
 	device/sanyo/40TL04/ueventd.freescale.rc:root/ueventd.freescale.rc \
-	device/sanyo/40TL04/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+	device/sanyo/40TL04/Benesse.kl:system/usr/keylayout/Benesse.kl \
 	device/sanyo/40TL04/ROHM_BU21023.idc:system/usr/idc/ROHM_BU21023.idc \
 	frameworks/base/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
 	frameworks/base/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml
@@ -39,10 +39,6 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_PACKAGES += \
 	librs_jni \
 	com.android.future.usb.accessory
-
-# keyboard mapping files.
-PRODUCT_PACKAGES += \
-	mxckpd.kcm
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
