@@ -1,4 +1,4 @@
-import init.imx53qsb.usb.rc
+import init.freescale.usb.rc
 
 on early-init
     export EXTERNAL_STORAGE /mnt/sdcard
