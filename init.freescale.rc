@@ -1,5 +1,3 @@
-import init.freescale.usb.rc
-
 on early-init
     export EXTERNAL_STORAGE /mnt/sdcard
     mkdir /mnt/sdcard 0000 system system
@@ -10,11 +8,23 @@ on post-fs-data
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
 
+on boot
+
+service wpa_supplicant /system/bin/wpa_supplicant \
+    -Dwext -iwlan0 -c/data/misc/wifi/wpa_supplicant.conf
+    socket wpa_wlan0 dgram 660 root wifi
+    disabled
+    oneshot
+
+#Factory Test Mode Process
+service tsmode /system/bin/sh init.tsmode.rc
+    oneshot
+
 on fs
 # mount ext4 partitions
-# if you use SD , you have change mmcblk0 to mmcblk1.
-    mount ext4 /dev/block/mmcblk0p2 /system
-    mount ext4 /dev/block/mmcblk0p2 /system ro remount
-    mount ext4 /dev/block/mmcblk0p5 /data nosuid nodev nodelalloc
-    mount ext4 /dev/block/mmcblk0p6 /cache nosuid nodev
+    mount ext4 /dev/block/mmcblk1p2 /system
+    mount ext4 /dev/block/mmcblk1p2 /system ro remount
+    mount ext4 /dev/block/mmcblk1p5 /data nosuid nodev nodelalloc
+    mount ext4 /dev/block/mmcblk1p6 /cache nosuid nodev
+    mount ext4 /dev/block/mmcblk1p7 /factory nosuid nodev
 
