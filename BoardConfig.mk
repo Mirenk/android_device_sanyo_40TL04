@@ -51,7 +51,7 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 # WiFi(testing)
 WIFI_DRIVER_MODULE_NAME := "wlan0"
 WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/lib/module/sd8787_uapsta.bin cfg80211_wext=12 sta_name=wlan uap_name=wlan wfd_name=p2p fw_name=sd8787_uapsta.bin"
-WIFI_DRIVER_MODULE_PATH := "/system/wifi/sd8787.ko"
+WIFI_DRIVER_MODULE_PATH := "/system/lib/module/sd8787.ko"
 
 WIFI_DRIVER_FW_PATH_P2P := "/system/etc/wifi/sd8787_uapsta.bin"
 WIFI_SDIO_IF_DRIVER_MODULE_PATH := "/system/wifi/mlan.ko"
