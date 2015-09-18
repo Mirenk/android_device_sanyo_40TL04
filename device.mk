@@ -23,10 +23,6 @@ PRODUCT_COPY_FILES := \
 	device/sanyo/40TL04/keylayout/Benesse.kl:system/usr/keylayout/Benesse.kl \
 	device/sanyo/40TL04/keylayout/Rohm-CTP-BU21023GUL.idc:system/usr/idc/Rohm-CTP-BU21023GUL.idc \
         device/sanyo/40TL04/vold.fstab.SDcard:system/etc/vold.fstab \
-	device/sanyo/40TL04/wifi/sd8787.ko:system/lib/module/sd8787.ko \
-	device/sanyo/40TL04/wifi/sd8787_uapsta.bin:system/lib/module/sd8787_uapsta.bin \
-	device/sanyo/40TL04/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-        device/sanyo/40TL04/wifi/wpa_supplicant:system/bin/wpa_supplicant \
 	frameworks/base/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
 	frameworks/base/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
         frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
@@ -35,7 +31,6 @@ PRODUCT_COPY_FILES := \
         packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
 PRODUCT_PACKAGES := \
-	gralloc.imx5x \
         make_ext4fs \
 	com.android.future.usb.accessory
 
@@ -50,7 +45,6 @@ PRODUCT_PACKAGES += \
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
-	gralloc.imx5x \
 	make_ext4fs
 
 PRODUCT_CHARACTERISTICS := tablet

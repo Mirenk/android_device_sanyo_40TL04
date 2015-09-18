@@ -16,6 +16,9 @@
 
 # These two variables are set first, so they can be overridden
 # by BoardConfigVendor.mk
+
+-include vendor/sanyo/AndroidVendor.mk
+
 BOARD_USES_GENERIC_AUDIO := true
 USE_CAMERA_STUB := true
 
