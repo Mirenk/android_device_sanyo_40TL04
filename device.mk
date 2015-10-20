@@ -15,7 +15,6 @@
 #
 
 PRODUCT_COPY_FILES := \
-	device/sanyo/40TL04/init.rc:root/init.rc \
 	device/sanyo/40TL04/init.freescale.rc:root/init.freescale.rc \
 	device/sanyo/40TL04/init.freescale.usb.rc:root/init.freescale.usb.rc \
 	device/sanyo/40TL04/ueventd.freescale.rc:root/ueventd.freescale.rc \
